@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Página de registro Copa Orbik 2020</title>
+	<link rel="icon" href="img/LogoSma.jpg">
+	<!-- Importación de herramientas Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="container-fluid">
+			<div class = "row">
+				<div class="col-md-2 col-sm-1 col-1"></div>
+				<a href="index.html">
+					<img src="img/logo.png">
+				</a>
+				<div class="col-md-8 col-sm-1"></div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menú de navegación -->
+	<nav class="nav navbar navbar-expand-md navbar-dark style="background-color: #002ed6;">
+		<div class="container-fluid">
+				<div class="col-lg-4"></div>
+				<!-- Botón de navegación para pantallas pequeñas -->
+		  		<a class="navbar-brand" href="#"></a>
+		  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    			<span class="navbar-toggler-icon"></span>
+		  		</button>
+
+		  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+		  			<!--Agregar botones con el modo Lista de HTML -->
+		    		<ul class="navbar-nav mr-auto">
+		    			<!-- Botón convocatoria -->
+		      			<li class="nav-item active">
+		        			<a class="botonConv" href="convocatoria.html">Convocatoria <span class="sr-only">(current)</span></a>
+		      			</li>
+
+		      			<!-- Lista desplegable del botón de Categorías -->
+		      			<li class="nav-item dropdown">
+		      				<!-- Botón-->
+		        			<a class="dropdown-toggle botonCat" href="#" id="navbarDropdown" role="button"
+		        			data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
+		        			<!-- Recuadro -->
+		        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		        					<!-- Lista -->
+		          					<a class="dropdown-item" href="testpdf.pdf">Mini Sumo</a>
+		          					<a class="dropdown-item" href="testpdf.pdf">Sumo Lego</a>
+		          					<a class="dropdown-item" href="testpdf.pdf">Seguidor con obstaculos</a>
+		          					<a class="dropdown-item" href="testpdf.pdf">Laberinto</a>
+		          					<a class="dropdown-item" href="testpdf.pdf">Odisea Espacial</a>
+		        				</div>
+		      			</li>
+
+		      			<!-- Botón inscripciones -->
+		      			<li class="nav-item active">
+		        			<a class=" botonIns" href="registro.html">Inscripciones<span class="sr-only">(current)</span></a>
+		      			</li>
+
+		      			<!-- Botón preguntas y comentarios -->
+		      			<li class="nav-item active">
+		        			<a class="botonPro" href="#">Preguntas y comentarios<span class="sr-only">(current)</span></a>
+		      			</li>
+		    		</ul>
+		  		</div>
+	  		</div>
+	</nav>
+
+	<!-- Sección de contenido -->
+	<section>
+		<div class="container-fluid fondo-azulclaro">
+			<br>
+			<div align="center">
+
+				<!-- Texto de título general-->
+				<div class="col caja-rtop caja-registro">
+					<div class="col">
+						<h3 class="texto-titulo">Formulario de registro</h3>
+					</div>
+				</div>
+
+				<!-- Descripción General -->
+				<div class="col caja-registro">
+					<div class="col">
+						<h5 class="texto-subtitulo">Con los datos de tu equipo y tu robot participante, llena
+						los datos correspondientes a cada campo. Asegúrate que cumplas con las estipulaciones
+						marcadas en los lineamientos de la categoría a participar.</h5>
+					</div>
+				</div>
+
+				<!-- Título de categorías -->
+				<div class="col caja-registro-sub">
+					<div class="col">
+						<h6 class="texto-subtitulo">Selección de Categoría</h6>
+					</div>
+				</div>
+
+				<!-- caja del dropdown de selección de categoría -->
+				<div class="col caja-registro">
+					<form>
+						<div class="form-row">
+							<div class="col-md-6 sm-12">
+						    	<label for="SelectCat">Seleccione categoría a participar</label>
+								<select class="form-control" id="SelectCat">
+								    <option>Minisumo</option>
+								    <option>Sumo Lego</option>
+								    <option>Seguidor con Obstáculos</option>
+								    <option>Laberinto</option>
+								    <option>Desafío Espacial</option>
+								</select>
+						    </div>
+						</div>
+					</form>
+				</div>
+
+				<!-- Título de participantes -->
+				<div class="col caja-registro-sub">
+					<div class="col">
+						<h6 class="texto-subtitulo">Participantes</h6>
+					</div>
+				</div>
+
+				<!-- Formulario -->
+				<form class="needs-validation" action = "/registro.php" novalidate> 
+
+					<!-- Sección del formulario de los participantes -->
+					<div class="col caja-registro">
+
+							<!-- Pregunta capitán del equipo -->
+		  					<div class="form-group">
+		    					<input type="text" name = "capEquipo"class="form-control" id="nombreCapitan" placeholder="Nombre del capitán del equipo" required>
+		    					<div class="invalid-feedback">Favor inserte el nombre de una persona</div>
+		  					</div>
+
+		  					<!-- Espacio en blanco -->
+		  					<div class="form-row">
+		    					<div class="form-group col" align="left">
+		    					</div>
+		    				</div>
+
+		    				<!-- Pregunta asesor del equipo -->
+		  					<div class="form-group">
+		    					<input type="text" class="form-control" id="nombreAsesor" placeholder="Nombre del asesor de equipo" required>
+		    					<small id="nombreAsesor" class="form-text text-muted">
+	  							Profesor, o adulto responsable del equipo.
+								</small>
+								<div class="invalid-feedback">Favor inserte el nombre de una persona</div>
+		  					</div>
+
+		  					<!-- Pregunta nombre del robot -->
+		  					<div class="form-group">
+		    					<input type="text" class="form-control" id="nombreRobot" placeholder="Nombre del robot" required>
+		    					<div class="invalid-feedback">Favor agreguele un nombre a su robot</div>
+		  					</div>
+
+		  					<!-- Espacio en blanco-->
+		  					<div class="form-row">
+		    					<div class="form-group col" align="left">
+		    					</div>
+		    				</div>
+
+		    				<!-- Pregunta nombre del participante 2-->
+		  					<div class="form-group">
+		    					<input type="text" class="form-control" id="nombrePar2" placeholder="Nombre del participante 2">
+		    					<small id="nombrePar2" class="form-text text-muted">
+	  							Campo opcional.
+								</small>
+		  					</div>
+
+		  					<!-- Pregunta nombre del participante 3-->
+		  					<div class="form-group">
+		    					<input type="text" class="form-control" id="nombrePar3" placeholder="Nombre del participante 3">
+		    					<small id="nombrePar3" class="form-text text-muted">
+	  							Campo opcional.
+								</small>
+		  					</div>
+
+		  					<!-- Pregunta institución de procedencia-->
+		  					<div class="form-group">
+		    					<input type="text" class="form-control" id="instProc" placeholder="Institución de procedencia" required>
+		    					<small id="instProc" class="form-text text-muted">
+	  							Ej Instituto Nacional de Robótica.
+								</small>
+								<div class="invalid-feedback">
+								Favor de insertar la institución de la cual provienen los participantes
+								</div>
+		  					</div>
+					</div>
+
+					<!-- Título de plataforma -->
+					<div class="col caja-registro-sub">
+						<div class="col">
+							<h6 class="texto-subtitulo">Plataforma del robot</h6>
+						</div>
+					</div>
+
+					<!-- Caja del formulario de plataforma -->
+					<div class="col caja-registro">
+							<!-- Pregunta Plataforma del robot-->
+		  					<div class="form-row">
+		    					<div class="form-group col-8">
+		      						<input type="text" class="form-control" id="platRob" placeholder="Plataforma del robot" required>
+		      						<div class="invalid-feedback">Favor inserte la plataforma del robot</div>
+		      					</div>
+		      					<div class="form-group col-4" align="left">
+		    						<small id="platRob" class="form-text text-muted">
+	  								Ej: Mindstorms EV3, Arduino
+									</small>
+		    					</div>
+		    				</div>
+
+		    				<!--Pregunta Marca del robot-->
+		    				<div class="form-row">
+		    					<div class="form-group col-8">
+		      						<input type="text" class="form-control" id="marcaRob" placeholder="Marca del kit del robot" required>
+		      						<div class="invalid-feedback">Favor inserte la marca del robot</div>
+		      					</div>
+		      					<div class="form-group col-4" align="left">
+		    						<small id="marcaRob" class="form-text text-muted">
+	  								Ej: Lego, Arduino
+									</small>
+		    					</div>
+		    				</div>
+
+		    				<!-- Pregunta procesador de control-->
+		    				<div class="form-row">
+		    					<div class="form-group col-8">
+		      						<input type="text" class="form-control" id="procControl" placeholder="Tipo de procesador de control" required>
+		      						<div class="invalid-feedback">Favor inserte un procesador de control</div>
+		      					</div>
+		    				</div>
+
+		    				<!--Preguntas Lenguaje y entorno de programacion-->
+		    				<div class="form-row">
+		    					<div class="form-group col-6">
+		      						<input type="text" class="form-control" id="lengProg" placeholder="Lenguaje de programacion" required>
+		      						<small id="lengProg" class="form-text text-muted">Ej: C++, Python</small>
+		      						<div class="invalid-feedback">Favor inserte el lenguaje de programación</div>
+		      					</div>
+		      					<div class="form-group col-6">
+		      						<input type="text" class="form-control" id="entProg" placeholder="Entorno de programación" required>
+		      						<small id="entProg" class="form-text text-muted">Ej: Mindstorms, Arduino IDE</small>
+		      						<div class="invalid-feedback">Favor inserte el entorno de programación</div>
+		      					</div>
+		    				</div>
+					</div>
+
+					<!-- Título de especificaciones-->
+					<div class="col caja-registro-sub">
+						<div class="col">
+							<h6 class="texto-subtitulo">Especificaciones del robot</h6>
+						</div>
+					</div>
+
+					<!-- Caja del formulario especificaciones de robot-->
+					<div class="col caja-registro caja-rbot">
+
+							<!--Preguntas dimensiones del robot-->
+							<div class="form-row">
+								<label>Dimensiones</label>
+							</div>
+							<div class="form-row">
+								<div class="col-4">
+									<input type="text" class="form-control" id="altoRob" placeholder="Alto" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+								<div class="col-4">
+									<input type="text" class="form-control" id="anchoRob" placeholder="Ancho" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+								<div class="col-4">
+									<input type="text" class="form-control" id="fondoRob" placeholder="Fondo" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+							</div>
+
+							<!-- Espacio en blanco -->
+		  					<div class="form-row">
+		    					<div class="form-group col" align="left">
+		    					</div>
+		    				</div>
+
+
+							<!--Preguntas Motores-->
+							<div class="form-row">
+								<label>Motores</label>
+							</div>
+							<div class="form-row">
+								<div class="col-6">
+									<input type="text" class="form-control" id="tipoMotor" placeholder="Tipo de motores" required>
+									<div class="invalid-feedback">Favor insertar un tipo de motor</div>
+								</div>
+								<div class="col-3">
+									<input type="text" class="form-control" id="numMotor" placeholder="Num. motores" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+							</div>
+
+							<!-- Espacio en blanco -->
+		  					<div class="form-row">
+		    					<div class="form-group col" align="left">
+		    					</div>
+		    				</div>
+
+		    				<!--Preguntas Baterías-->
+							<div class="form-row">
+								<label>Baterías</label>
+							</div>
+							<div class="form-row">
+								<div class="col-6">
+									<input type="text" class="form-control" id="tipoBat" placeholder="Tipo de baterías" required>
+									<div class="invalid-feedback">Favor inserte un tipo de baterías</div>
+								</div>
+								<div class="col-3">
+									<input type="text" class="form-control" id="voltBat" placeholder="Voltaje" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+								<div class="col-3">
+									<input type="text" class="form-control" id="corrBat" placeholder="Corriente" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+							</div>
+
+							<!-- Espacio en blanco -->
+		  					<div class="form-row">
+		    					<div class="form-group col" align="left">
+		    					</div>
+		    				</div>
+
+							<!--Preguntas Sensores-->
+							<div class="form-row">
+								<label>Sensores</label>
+							</div>
+							<div class="form-row">
+								<div class="col-6">
+									<input type="text" class="form-control" id="tipoSensor" placeholder="Tipo de sensores" required>
+									<div class="invalid-feedback">Favor de insertar un tipo de sensor</div>
+								</div>
+								<div class="col-3">
+									<input type="text" class="form-control" id="numSensor" placeholder="Num. sensores" required>
+									<div class="invalid-feedback">Favor inserte un número</div>
+								</div>
+							</div>
+
+							<!-- Espacio en blanco -->
+		  					<div class="form-row">
+		    					<div class="form-group col" align="left">
+		    					</div>
+		    				</div>
+
+							<!--Checkboxes-->
+							<div class="form-group" align="left">
+						   		<div class="form-check">
+						    		<input class="form-check-input" type="checkbox" id="checkInfor" required>
+						      		<label class="form-check-label" for="checkInfor">
+						        	He verificado la información del formulario
+						      		</label>
+						      		<div class="invalid-feedback">
+	        						Verifique los datos insertados una vez más para evitar errores
+	      							</div>
+						    	</div>
+							</div>
+							<div class="form-group" align="left">
+						   		<div class="form-check">
+						    		<input class="form-check-input" type="checkbox" id="checkRule" required>
+						      		<label class="form-check-label" for="checkRule">
+						        	He leído y aceptado las reglas correspondientes a la categoría que intento registrarme
+						      		</label>
+						      		<div class="invalid-feedback">
+	        						Usted debe leer los lineamientos de su categoría antes de registrarse
+	      							</div>
+						    	</div>
+							</div>
+						<button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+					</div>
+				</form>
+			</div>
+			<br>
+		</div>
+	</section>
+
+	<!-- Modal para mensaje de confirmacion-->
+	<div class="modal fade" id="ventana-confirmacion" tabindex="-1" role="dialog"
+	aria-labelledby="ventana-confirmacion-finalizado" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="ventana-confirmacion-finalizado">Finalizado</h5>
+	      </div>
+	      <div class="modal-body">
+			<p>Sus datos han sido enviados exitosamente, una persona confirmará su información y le enviará al correo electrónico
+			proporcionado información adicional acerca de la siguiente etapa de registro.</p>
+	      </div>
+	      <div class="modal-footer">
+	        	<a href = "index.html" type="button" class="btn btn-primary" data-dismiss="modal">Aceptar y volver a la pagina de Inicio</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+		<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4 ">
+                    <div class="footer_logo">
+                        <a href="index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <p class="footerTexto">Copa Orbik 2020 es un evento
+                     	<br> a cargo del Instituto de Innovación
+                       	<br> Y Robótica Educativa en colaboración
+                       	<br> con X y Y.
+                        <br>
+                    </p>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <h3 class="footerTitulo">
+                        Indice
+                    </h3>
+                    <ul>
+                        <li><a class = "footerTexto" href="#">Categorías</a></li>
+                        <li><a class = "footerTexto" href="convocatoria.html">Convocatoria</a></li>
+                        <li><a class = "footerTexto" href="index.html">Inicio</a></li>
+                        <li><a class = "footerTexto" href="#">Preguntas y comentarios</a></li>
+                        <li><a class = "footerTexto" href="registro.html">Registro</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4  col-md-6 col-lg-4">
+                    <h3 class="footerTitulo">
+                       Contacto
+                    </h3>
+                    <p class="footerTexto">Correo Electrónico:
+                    <br>CopaOrbik2020@gmail.com
+                    <br>
+                    <br>Número telefónico:
+                    <br>211-45-67
+                    </p>
+                </div>
+            </div>
+        </div>
+
+	<script src="js/formvalidation.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
